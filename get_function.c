@@ -29,6 +29,9 @@ count_fun += spec[i].f(args);
 i++;
 }
 
+if (count_fun == -1)
+return (0);
+
 if (count_fun == 0)
 {
 count_fun += _putchar('%');
