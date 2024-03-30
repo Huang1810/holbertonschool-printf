@@ -15,7 +15,7 @@ int print_string(va_list args)
 int i;
 int count_fun = 0;
 char *str = va_arg(args, char *);
-if (str == "\0")
+if strcmp(str, "")
 return (0);
 if (!str)
 str = "(null)";
