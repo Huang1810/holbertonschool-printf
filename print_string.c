@@ -1,8 +1,6 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdarg.h>
-#include <string.h>
-
 
 /**
  * print_string - print string.
@@ -17,9 +15,7 @@ int print_string(va_list args)
 int i;
 int count_fun = 0;
 char *str = va_arg(args, char *);
-if (strcmp(str, "") == 0)
-return (-1);
-if (!str)
+if (str == NULL)
 str = "(null)";
 if (str[0] == '\0')
 return (-1);
