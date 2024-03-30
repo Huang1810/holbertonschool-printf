@@ -1,6 +1,8 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdarg.h>
+#include <string.h>
+
 
 /**
  * print_string - print string.
