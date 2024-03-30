@@ -18,7 +18,7 @@ int i;
 int count_fun = 0;
 char *str = va_arg(args, char *);
 if (strcmp(str, "") == 0)
-return (0);
+return (-1);
 if (!str)
 str = "(null)";
 if (str[0] == '\0')
