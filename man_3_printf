@@ -1,0 +1,61 @@
+.TH _printf 3 "January 2024" "Version 1.0" "User Commands"
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+.B #include <stdio.h>
+.br
+.I int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The
+.B _printf
+function prints formatted output to the standard output stream (stdout). It accepts a format string and zero or more additional arguments, and produces output according to the format string.
+
+.SH RETURN VALUE
+The
+.B _printf
+function returns the number of characters printed (excluding the null byte used to end output to strings).
+
+.SH FORMAT STRING
+The format string is composed of zero or more directives, which control the output format. Supported conversion specifiers include:
+.TP
+.B c
+Prints a single character.
+.TP
+.B s
+Prints a null-terminated string.
+.TP
+.B %
+Prints a literal '%'.
+
+.SH EXAMPLES
+The following examples demonstrate the usage of the
+.B _printf
+function:
+.PP
+.B #include <stdio.h>
+.br
+.B int main() {
+.br
+.B     _printf("Hello, %s! My favorite character is %c and I have %d%% chance of winning.\n", "world", 'A', 80);
+.br
+.B     return 0;
+.br
+.B }
+
+.SH SEE ALSO
+man(1), printf(3)
+
+.SH BUGS
+None known.
+
+.SH AUTHOR
+Written by [Your Name].
+
+.SH COPYRIGHT
+This manual page is distributed under the same license as the _printf function.
+
+.SH NOTES
+This manual page was created using [Your favorite documentation tool].

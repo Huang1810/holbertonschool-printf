@@ -20,14 +20,18 @@ specifiers_t spec[] = {
 {'d', print_digit},
 {'i', print_digit},
 {'r', print_rev_string},
-{0, NULL}
-};
-while (spec[i].specifiers)
+{0, NULL}};
+int i;
+
+for (i = 0; spec[i].specifiers; i++)
 {
 if (con_spec == spec[i].specifiers)
+{
 count_fun += spec[i].f(args);
-i++;
+break;
 }
+}
+
 if (count_fun == 0)
 {
 count_fun += _putchar('%');
